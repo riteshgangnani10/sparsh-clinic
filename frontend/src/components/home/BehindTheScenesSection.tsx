@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { FiCamera, FiMapPin, FiUsers } from 'react-icons/fi';
+import { FiCamera } from 'react-icons/fi';
 
 const facilityAreas = [
   {
