@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { FiChevronLeft, FiChevronRight, FiStar, FiQuote, FiAward, FiHeart, FiUsers } from 'react-icons/fi';
+import { FiChevronLeft, FiChevronRight, FiStar, FiAward, FiHeart, FiUsers } from 'react-icons/fi';
 import { testimonialsAPI } from '../../api';
 
 // Default testimonials if API fails
@@ -51,7 +51,7 @@ const defaultTestimonials = [
 export default function TestimonialsSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const { data, isLoading, error } = useQuery({
+  const { data, isLoading } = useQuery({
     queryKey: ['testimonials', 'homepage'],
     queryFn: async () => {
       const response = await testimonialsAPI.getAll({ 
@@ -133,7 +133,9 @@ export default function TestimonialsSection() {
               {/* Quote Icon */}
               <div className="flex justify-center mb-8">
                 <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center">
-                  <FiQuote className="w-8 h-8 text-primary-600" />
+                  <svg className="w-8 h-8 text-primary-600" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                  </svg>
                 </div>
               </div>
 

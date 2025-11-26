@@ -93,7 +93,7 @@ const defaultServices = [
 ];
 
 export default function ServicesSection() {
-  const { data, isLoading, error } = useQuery({
+  const { data, isLoading } = useQuery({
     queryKey: ['services', 'active'],
     queryFn: async () => {
       const response = await servicesAPI.getAll({ isActive: true });

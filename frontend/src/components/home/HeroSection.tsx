@@ -7,7 +7,6 @@ interface HeroSectionProps {
 }
 
 export default function HeroSection({ settings }: HeroSectionProps) {
-  const heroTitle = settings?.homepage?.heroTitle || 'Helping Children Reach Their Full Potential';
   const heroSubtitle = settings?.homepage?.heroSubtitle || 'Expert pediatric physiotherapy, occupational therapy, and speech therapy services with 18+ years of proven results in child development.';
 
   return (
