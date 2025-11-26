@@ -1,78 +1,79 @@
 import { motion } from 'framer-motion';
-import { FiHeart, FiStar, FiUsers, FiTrendingUp, FiSmile, FiSun } from 'react-icons/fi';
+import { FiHeart, FiTarget, FiUsers, FiTrendingUp, FiSmile, FiAward } from 'react-icons/fi';
 
-const missionStories = [
+const impactAreas = [
   {
     icon: <FiHeart className="w-8 h-8" />,
-    title: "Restoring Hope",
-    description: "When families come to us feeling overwhelmed, we restore hope by showing them what's possible.",
-    color: "from-red-400 to-pink-500",
-    story: "Every parent who walks through our doors carries hope mixed with worry. We transform that worry into confidence.",
-    impact: "Hope Restored"
+    title: "Compassionate Excellence",
+    description: "Every interaction is guided by genuine care, professional expertise, and unwavering commitment to your child's success.",
+    color: "from-rose-400 to-pink-500",
+    story: "We believe that healing begins with compassion. Every child receives individualized attention in a nurturing environment.",
+    metric: "100% Personalized"
   },
   {
-    icon: <FiStar className="w-8 h-8" />,
-    title: "Celebrating Milestones",
-    description: "Every small achievement is a giant leap forward. We celebrate each victory, no matter how small.",
-    color: "from-yellow-400 to-orange-500",
-    story: "From first steps to first words, we celebrate every milestone as if it were our own child's achievement.",
-    impact: "Milestones Achieved"
+    icon: <FiTarget className="w-8 h-8" />,
+    title: "Milestone Achievements",
+    description: "We celebrate every victory, from first steps to independent communication, recognizing that progress comes in many forms.",
+    color: "from-amber-400 to-orange-500",
+    story: "Each milestone reached is a testament to your child's determination and our collaborative approach to therapy.",
+    metric: "5000+ Milestones"
   },
   {
     icon: <FiUsers className="w-8 h-8" />,
-    title: "Building Community",
-    description: "We create a supportive community where families connect, share experiences, and grow together.",
+    title: "Family Partnership",
+    description: "We work closely with families, providing education, support, and tools to continue progress at home.",
     color: "from-blue-400 to-indigo-500",
-    story: "Our clinic becomes a second home where families find not just therapy, but friendship and understanding.",
-    impact: "Families Connected"
+    story: "Parents become our partners in therapy, equipped with knowledge and confidence to support their child's journey.",
+    metric: "Families Empowered"
   },
   {
     icon: <FiTrendingUp className="w-8 h-8" />,
-    title: "Unlocking Potential",
-    description: "We see beyond limitations to discover the unique potential within every child.",
-    color: "from-green-400 to-teal-500",
-    story: "What others see as challenges, we see as opportunities to unlock hidden strengths and abilities.",
-    impact: "Potential Unlocked"
+    title: "Proven Outcomes",
+    description: "Our evidence-based approach consistently delivers measurable improvements in function and quality of life.",
+    color: "from-emerald-400 to-teal-500",
+    story: "Data-driven therapy plans ensure that every session contributes meaningfully to your child's development.",
+    metric: "95% Success Rate"
   },
   {
     icon: <FiSmile className="w-8 h-8" />,
-    title: "Creating Joy",
-    description: "Therapy should be joyful. We make every session an opportunity for laughter and happiness.",
-    color: "from-purple-400 to-pink-500",
-    story: "The sound of children's laughter during therapy sessions is the music that drives our mission.",
-    impact: "Joy Created"
+    title: "Joyful Learning",
+    description: "Therapy should be engaging and fun. We create positive experiences that children look forward to.",
+    color: "from-violet-400 to-purple-500",
+    story: "When children enjoy their therapy sessions, they're more motivated to participate and achieve their goals.",
+    metric: "Happy Children"
   },
   {
-    icon: <FiSun className="w-8 h-8" />,
-    title: "Brightening Futures",
-    description: "Every child we help goes on to brighten the world with their unique gifts and abilities.",
-    color: "from-amber-400 to-yellow-500",
-    story: "We don't just change lives today - we create brighter tomorrows for children and their families.",
-    impact: "Futures Brightened"
+    icon: <FiAward className="w-8 h-8" />,
+    title: "Professional Excellence",
+    description: "Our team maintains the highest standards through continuous education and evidence-based practice.",
+    color: "from-cyan-400 to-blue-500",
+    story: "NDTA and USC certifications ensure that your child receives the most advanced and effective treatments available.",
+    metric: "Expert Certified"
   }
 ];
 
 const impactNumbers = [
-  { number: "5000+", label: "Lives Transformed", description: "Children who now live fuller, happier lives" },
-  { number: "18+", label: "Years of Dedication", description: "Committed to making life worth living" },
-  { number: "95%", label: "Success Rate", description: "Families who see significant improvement" },
-  { number: "100%", label: "Love & Care", description: "Every child treated with unconditional love" }
+  { number: "5000+", label: "Children Served", description: "Families who have found hope and progress with us" },
+  { number: "18+", label: "Years of Excellence", description: "Dedicated to pediatric rehabilitation since 2005" },
+  { number: "95%", label: "Positive Outcomes", description: "Families report significant improvement in their child's abilities" },
+  { number: "100%", label: "Personalized Care", description: "Every treatment plan is uniquely designed for each child" }
 ];
 
 export default function MakingLifeWorthLivingSection() {
   return (
-    <section className="py-24 bg-gradient-to-br from-slate-50 via-white to-teal-50 relative overflow-hidden">
+    <section className="py-24 bg-gradient-to-br from-slate-50 via-white to-blue-50 relative overflow-hidden">
       
-      {/* Background Pattern */}
+      {/* Subtle Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <svg width="100%" height="100%" viewBox="0 0 100 100">
           <defs>
-            <pattern id="heart-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-              <path d="M10 15 C10 10, 15 5, 20 5 C25 5, 30 10, 30 15 C30 25, 20 35, 20 35 C20 35, 10 25, 10 15 Z" 
-                    fill="#20B2AA" opacity="0.3" transform="scale(0.3) translate(10,10)"/>
+            <pattern id="impact-pattern" x="0" y="0" width="25" height="25" patternUnits="userSpaceOnUse">
+              <circle cx="12.5" cy="12.5" r="1.5" fill="#3b82f6" />
+              <circle cx="6" cy="19" r="1" fill="#06b6d4" />
+              <circle cx="19" cy="6" r="1" fill="#8b5cf6" />
             </pattern>
           </defs>
-          <rect width="100" height="100" fill="url(#heart-pattern)" />
+          <rect width="100" height="100" fill="url(#impact-pattern)" />
         </svg>
       </div>
 
@@ -86,58 +87,57 @@ export default function MakingLifeWorthLivingSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <div className="inline-flex items-center bg-gradient-to-r from-teal-100 to-orange-100 px-6 py-3 rounded-full text-teal-800 font-semibold mb-8">
-            <FiHeart className="w-5 h-5 mr-2 text-teal-600" />
-            Our Mission in Action
+          <div className="inline-flex items-center bg-gradient-to-r from-blue-100 to-violet-100 px-6 py-3 rounded-full text-blue-800 font-semibold mb-8">
+            <FiHeart className="w-5 h-5 mr-2 text-blue-600" />
+            Our Impact & Approach
           </div>
           
-          <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-8">
-            Making Life
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 via-blue-500 to-orange-500">
-              {" "}Worth Living!
+          <h2 className="text-5xl lg:text-6xl font-bold text-slate-900 mb-8">
+            Transforming Lives Through
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-600 to-violet-600">
+              {" "}Expert Care
             </span>
           </h2>
           
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            This isn't just our tagline – it's our promise, our purpose, and our passion. 
-            Every day, we witness the transformation of lives, the restoration of hope, 
-            and the creation of possibilities that seemed impossible.
+          <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+            At Sparsh Clinic, we combine clinical excellence with heartfelt compassion. 
+            Our comprehensive approach addresses not just the condition, but the whole child and family, 
+            creating lasting positive change that extends far beyond our clinic walls.
           </p>
         </motion.div>
 
-        {/* Mission Stories Grid */}
+        {/* Impact Areas Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-          {missionStories.map((story, index) => (
+          {impactAreas.map((area, index) => (
             <motion.div
-              key={story.title}
+              key={area.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.8 }}
-              className="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
+              className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-slate-100"
             >
               {/* Card Header */}
-              <div className={`h-2 bg-gradient-to-r ${story.color}`}></div>
+              <div className={`h-1 bg-gradient-to-r ${area.color}`}></div>
               
               <div className="p-8">
                 {/* Icon */}
-                <div className={`w-16 h-16 bg-gradient-to-r ${story.color} rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  {story.icon}
+                <div className={`w-14 h-14 bg-gradient-to-r ${area.color} rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  {area.icon}
                 </div>
 
                 {/* Content */}
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{story.title}</h3>
-                <p className="text-gray-600 leading-relaxed mb-6">{story.description}</p>
+                <h3 className="text-xl font-bold text-slate-900 mb-4">{area.title}</h3>
+                <p className="text-slate-600 leading-relaxed mb-6">{area.description}</p>
                 
-                {/* Story Quote */}
-                <div className="bg-gray-50 rounded-2xl p-4 mb-4">
-                  <p className="text-sm text-gray-700 italic leading-relaxed">"{story.story}"</p>
+                {/* Story */}
+                <div className="bg-slate-50 rounded-xl p-4 mb-4">
+                  <p className="text-sm text-slate-700 leading-relaxed italic">"{area.story}"</p>
                 </div>
 
-                {/* Impact Badge */}
-                <div className={`inline-flex items-center bg-gradient-to-r ${story.color} text-white px-4 py-2 rounded-full text-sm font-semibold`}>
-                  <FiStar className="w-4 h-4 mr-2" />
-                  {story.impact}
+                {/* Metric Badge */}
+                <div className={`inline-flex items-center bg-gradient-to-r ${area.color} text-white px-4 py-2 rounded-full text-sm font-semibold`}>
+                  {area.metric}
                 </div>
               </div>
             </motion.div>
@@ -150,13 +150,13 @@ export default function MakingLifeWorthLivingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="bg-gradient-to-r from-teal-600 via-blue-600 to-orange-600 rounded-3xl p-12 text-white mb-20"
+          className="bg-gradient-to-r from-slate-900 via-blue-900 to-violet-900 rounded-3xl p-12 text-white mb-20"
         >
           <div className="text-center mb-12">
-            <h3 className="text-3xl lg:text-4xl font-bold mb-4">Our Impact Speaks Volumes</h3>
-            <p className="text-xl text-teal-100 max-w-3xl mx-auto">
-              Numbers tell a story, but behind every number is a life transformed, 
-              a family reunited with hope, and a future made brighter.
+            <h3 className="text-3xl lg:text-4xl font-bold mb-4">Our Track Record Speaks</h3>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              These numbers represent real families, real progress, and real hope. 
+              Each statistic tells a story of transformation and achievement.
             </p>
           </div>
 
@@ -170,48 +170,53 @@ export default function MakingLifeWorthLivingSection() {
                 transition={{ delay: index * 0.1, duration: 0.6 }}
                 className="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-6"
               >
-                <div className="text-4xl lg:text-5xl font-bold mb-2">{item.number}</div>
-                <div className="text-lg font-semibold text-teal-100 mb-2">{item.label}</div>
-                <div className="text-sm text-white/80 leading-relaxed">{item.description}</div>
+                <div className="text-4xl lg:text-5xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                  {item.number}
+                </div>
+                <div className="text-lg font-semibold text-slate-200 mb-2">{item.label}</div>
+                <div className="text-sm text-slate-400 leading-relaxed">{item.description}</div>
               </motion.div>
             ))}
           </div>
         </motion.div>
 
-        {/* Mission Statement */}
+        {/* Philosophy Statement */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center bg-white rounded-3xl shadow-xl p-12"
+          className="text-center bg-white rounded-3xl shadow-lg p-12"
         >
           <div className="max-w-4xl mx-auto">
-            <div className="w-20 h-20 mx-auto mb-8 bg-gradient-to-r from-teal-500 to-orange-500 rounded-full flex items-center justify-center">
+            <div className="w-20 h-20 mx-auto mb-8 bg-gradient-to-r from-blue-500 to-violet-500 rounded-full flex items-center justify-center">
               <FiHeart className="w-10 h-10 text-white" />
             </div>
             
-            <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-8">
-              Our Promise to Every Family
+            <h3 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-8">
+              Our Commitment to Excellence
             </h3>
             
-            <blockquote className="text-xl lg:text-2xl text-gray-700 leading-relaxed italic mb-8">
-              "We promise to see beyond the diagnosis to the child within. 
-              We promise to celebrate every small victory as if it were our own. 
-              We promise to never give up on any child's potential. 
-              Most importantly, we promise to make every life we touch worth living."
+            <blockquote className="text-xl lg:text-2xl text-slate-700 leading-relaxed italic mb-8">
+              "We believe that every child deserves the opportunity to reach their full potential. 
+              Through evidence-based practice, compassionate care, and unwavering dedication, 
+              we help families navigate their journey with confidence and hope."
             </blockquote>
             
-            <div className="flex items-center justify-center space-x-4">
-              <div className="w-16 h-16 bg-gradient-to-br from-teal-400 to-teal-600 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-lg">TP</span>
+            <div className="flex items-center justify-center space-x-6">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mb-2">
+                  <span className="text-white font-bold text-lg">TP</span>
+                </div>
+                <div className="font-semibold text-slate-900">Dr. Tejas Patel</div>
+                <div className="text-sm text-slate-600">Lead Physiotherapist</div>
               </div>
-              <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-lg">MP</span>
-              </div>
-              <div className="text-left">
-                <div className="font-bold text-gray-900">Dr. Tejas & Dr. Mona Patel</div>
-                <div className="text-gray-600">Founders, Sparsh Clinic</div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-violet-500 to-purple-500 rounded-full flex items-center justify-center mb-2">
+                  <span className="text-white font-bold text-lg">MP</span>
+                </div>
+                <div className="font-semibold text-slate-900">Dr. Mona Patel</div>
+                <div className="text-sm text-slate-600">Occupational Therapist</div>
               </div>
             </div>
           </div>
@@ -225,24 +230,24 @@ export default function MakingLifeWorthLivingSection() {
           transition={{ delay: 0.4, duration: 0.8 }}
           className="text-center mt-16"
         >
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">
-            Ready to Make Your Child's Life Worth Living?
+          <h3 className="text-2xl font-bold text-slate-900 mb-4">
+            Ready to Begin Your Child's Journey?
           </h3>
-          <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-            Every journey begins with hope and a single step. 
-            Let us walk alongside you as we unlock your child's potential together.
+          <p className="text-slate-600 mb-8 max-w-2xl mx-auto">
+            Take the first step towards unlocking your child's potential. 
+            Schedule a consultation and discover how we can help your family thrive.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-teal-500 via-blue-500 to-orange-500 text-white font-bold px-8 py-4 rounded-2xl hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+            <button className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-bold px-8 py-4 rounded-xl hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
               <div className="flex items-center justify-center space-x-2">
                 <FiHeart className="w-5 h-5" />
-                <span>Start Your Journey Today</span>
+                <span>Schedule Consultation</span>
               </div>
             </button>
             
-            <button className="border-2 border-teal-500 text-teal-600 hover:bg-teal-50 font-bold px-8 py-4 rounded-2xl transition-all duration-300">
-              Learn More About Our Mission
+            <button className="border-2 border-slate-300 text-slate-700 hover:bg-slate-50 font-bold px-8 py-4 rounded-xl transition-all duration-300">
+              Learn About Our Services
             </button>
           </div>
         </motion.div>

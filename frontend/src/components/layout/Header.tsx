@@ -37,41 +37,39 @@ export default function Header() {
     }`}>
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
-          {/* Sparsh Logo */}
+          {/* Sparsh Logo - Refined */}
           <Link to="/" className="flex items-center space-x-3 group">
-            {/* Logo SVG - Recreating the Sparsh logo design */}
             <div className="relative">
-              <svg width="120" height="40" viewBox="0 0 300 100" className="group-hover:scale-105 transition-transform">
-                {/* Background circle for logo */}
+              <svg width="140" height="45" viewBox="0 0 350 110" className="group-hover:scale-105 transition-transform">
                 <defs>
-                  <linearGradient id="sparsh-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stopColor="#20B2AA" />
-                    <stop offset="20%" stopColor="#9ACD32" />
-                    <stop offset="40%" stopColor="#6A5ACD" />
-                    <stop offset="60%" stopColor="#FF6347" />
-                    <stop offset="80%" stopColor="#20B2AA" />
-                    <stop offset="100%" stopColor="#2F4F4F" />
+                  {/* Refined gradient for logo */}
+                  <linearGradient id="sparsh-refined-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stopColor="#3b82f6" />
+                    <stop offset="25%" stopColor="#06b6d4" />
+                    <stop offset="50%" stopColor="#8b5cf6" />
+                    <stop offset="75%" stopColor="#10b981" />
+                    <stop offset="100%" stopColor="#f59e0b" />
                   </linearGradient>
                 </defs>
                 
-                {/* Sparsh text */}
-                <text x="10" y="35" fontSize="32" fontWeight="bold" fill="url(#sparsh-gradient)" fontFamily="Arial, sans-serif">
+                {/* Sparsh text - more refined */}
+                <text x="15" y="40" fontSize="36" fontWeight="700" fill="url(#sparsh-refined-gradient)" fontFamily="Inter, sans-serif">
                   sparsh
                 </text>
                 
-                {/* Subtitle */}
-                <text x="10" y="55" fontSize="12" fill="#666" fontFamily="Arial, sans-serif">
-                  paediatric rehabilitation clinic
+                {/* Subtitle - more professional */}
+                <text x="15" y="60" fontSize="11" fill="#64748b" fontFamily="Inter, sans-serif" fontWeight="500">
+                  pediatric rehabilitation clinic
                 </text>
                 
-                {/* Tagline */}
-                <text x="10" y="75" fontSize="10" fill="#FF6347" fontFamily="Arial, sans-serif" fontStyle="italic">
+                {/* Tagline - smaller and more subtle */}
+                <text x="15" y="80" fontSize="9" fill="#f59e0b" fontFamily="Inter, sans-serif" fontStyle="italic" fontWeight="400">
                   "making life, worth living!"
                 </text>
                 
-                {/* Small heart icon */}
-                <path d="M270 25 C270 20, 275 15, 280 15 C285 15, 290 20, 290 25 C290 35, 280 45, 280 45 C280 45, 270 35, 270 25 Z" 
-                      fill="#FF6347" opacity="0.8"/>
+                {/* Refined heart icon */}
+                <path d="M300 30 C300 25, 305 20, 310 20 C315 20, 320 25, 320 30 C320 40, 310 50, 310 50 C310 50, 300 40, 300 30 Z" 
+                      fill="#f59e0b" opacity="0.8"/>
               </svg>
             </div>
           </Link>
@@ -82,9 +80,9 @@ export default function Header() {
               <Link
                 key={link.to}
                 to={link.to}
-                className={`font-medium transition-colors hover:text-teal-600 ${
+                className={`font-medium transition-colors hover:text-blue-600 ${
                   location.pathname === link.to 
-                    ? 'text-teal-600' 
+                    ? 'text-blue-600' 
                     : scrolled ? 'text-slate-700' : 'text-slate-800'
                 }`}
               >
@@ -97,16 +95,16 @@ export default function Header() {
           <div className="hidden lg:flex items-center space-x-4">
             <a 
               href="tel:+919426284419"
-              className="flex items-center space-x-2 text-slate-600 hover:text-teal-600 transition-colors"
+              className="flex items-center space-x-2 text-slate-600 hover:text-blue-600 transition-colors"
             >
               <FiPhone className="w-4 h-4" />
               <span className="font-medium">+91-9426284419</span>
             </a>
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-teal-500 to-blue-500 hover:from-teal-600 hover:to-blue-600 text-white px-6 py-2 rounded-lg font-semibold transition-all hover:shadow-md"
+              className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-6 py-2 rounded-lg font-semibold transition-all hover:shadow-md"
             >
-              Start Your Journey
+              Get Started
             </Link>
           </div>
 
@@ -139,7 +137,7 @@ export default function Header() {
                     to={link.to}
                     className={`block px-4 py-3 rounded-lg font-medium transition-colors ${
                       location.pathname === link.to
-                        ? 'bg-teal-50 text-teal-600'
+                        ? 'bg-blue-50 text-blue-600'
                         : 'text-slate-700 hover:bg-slate-50'
                     }`}
                   >
@@ -151,16 +149,16 @@ export default function Header() {
                 <div className="px-4 py-3 border-t border-slate-100 space-y-3">
                   <a 
                     href="tel:+919426284419"
-                    className="flex items-center space-x-2 text-slate-600 hover:text-teal-600"
+                    className="flex items-center space-x-2 text-slate-600 hover:text-blue-600"
                   >
                     <FiPhone className="w-4 h-4" />
                     <span>+91-9426284419</span>
                   </a>
                   <Link
                     to="/contact"
-                    className="block bg-gradient-to-r from-teal-500 to-blue-500 text-white text-center py-3 rounded-lg font-semibold"
+                    className="block bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-center py-3 rounded-lg font-semibold"
                   >
-                    Start Your Journey
+                    Get Started
                   </Link>
                 </div>
               </nav>
