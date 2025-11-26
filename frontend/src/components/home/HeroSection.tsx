@@ -136,26 +136,28 @@ export default function HeroSection({}: HeroSectionProps) {
               </button>
             </motion.div>
 
-            {/* Contact Info - Clean Layout */}
+            {/* Contact Info - Better Positioned */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.6 }}
-              className="flex flex-wrap items-center gap-6 text-sm text-slate-600 pt-4"
+              className="bg-white/70 backdrop-blur-sm rounded-lg p-4 border border-slate-200"
             >
-              <div className="flex items-center space-x-2">
-                <FiMapPin className="w-4 h-4 text-blue-600" />
-                <span>Ahmedabad, Gujarat</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <FiClock className="w-4 h-4 text-blue-600" />
-                <span>Mon-Sat: 9AM-7PM</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <svg className="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                <span>18+ Years Excellence</span>
+              <div className="flex flex-wrap items-center justify-between gap-4 text-sm">
+                <div className="flex items-center space-x-2 text-slate-600">
+                  <FiMapPin className="w-4 h-4 text-blue-600" />
+                  <span>Ahmedabad, Gujarat</span>
+                </div>
+                <div className="flex items-center space-x-2 text-slate-600">
+                  <FiClock className="w-4 h-4 text-blue-600" />
+                  <span>Mon-Sat: 9AM-7PM</span>
+                </div>
+                <div className="flex items-center space-x-2 text-slate-600">
+                  <svg className="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                  <span>NDTA Certified</span>
+                </div>
               </div>
             </motion.div>
           </div>
@@ -252,15 +254,6 @@ export default function HeroSection({}: HeroSectionProps) {
         </div>
       </div>
 
-      {/* Professional Footer Quote */}
-      <div className="absolute bottom-0 left-0 right-0 bg-white/80 backdrop-blur-sm py-6 border-t border-slate-100">
-        <div className="container mx-auto px-6 text-center">
-          <p className="text-lg font-medium text-slate-700">
-            "Every child has unlimited potential. Our expertise helps unlock it."
-          </p>
-          <p className="text-sm text-slate-500 mt-2">- Dr. Tejas & Dr. Mona Patel, Founders</p>
-        </div>
-      </div>
     </section>
   );
 }

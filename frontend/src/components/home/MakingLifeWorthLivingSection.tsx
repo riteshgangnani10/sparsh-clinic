@@ -195,20 +195,20 @@ export default function MakingLifeWorthLivingSection() {
             </blockquote>
             
             <div className="flex items-center justify-center space-x-8">
-              <div className="text-center">
-                <div className="w-14 h-14 bg-blue-600 rounded-full flex items-center justify-center mb-2">
+              <div className="flex items-center justify-center">
+                <div className="w-14 h-14 bg-blue-600 rounded-full flex items-center justify-center">
                   <span className="text-white font-bold text-lg">TP</span>
                 </div>
-                <div className="font-semibold text-slate-900 text-sm">Dr. Tejas Patel</div>
-                <div className="text-xs text-slate-600">Lead Physiotherapist</div>
               </div>
-              <div className="text-center">
-                <div className="w-14 h-14 bg-blue-600 rounded-full flex items-center justify-center mb-2">
+              <div className="flex items-center justify-center">
+                <div className="w-14 h-14 bg-blue-600 rounded-full flex items-center justify-center">
                   <span className="text-white font-bold text-lg">MP</span>
                 </div>
-                <div className="font-semibold text-slate-900 text-sm">Dr. Mona Patel</div>
-                <div className="text-xs text-slate-600">Occupational Therapist</div>
               </div>
+            </div>
+            <div className="text-center mt-4">
+              <div className="font-semibold text-slate-900">Dr. Tejas Patel & Dr. Mona Patel</div>
+              <div className="text-sm text-slate-600">Founders, Sparsh Clinic</div>
             </div>
           </div>
         </motion.div>

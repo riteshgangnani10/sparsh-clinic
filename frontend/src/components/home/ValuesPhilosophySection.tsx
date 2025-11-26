@@ -243,28 +243,11 @@ export default function ValuesPhilosophySection() {
             
             <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-100">
               <h4 className="text-xl font-bold text-slate-900 mb-4">Experience the Difference</h4>
-              <p className="text-base text-slate-700 leading-relaxed mb-6">
+              <p className="text-base text-slate-700 leading-relaxed">
                 "Our values come to life in every moment we spend with your child. 
                 From the warmth of our welcome to the expertise of our care, 
                 you'll feel the difference that values-driven practice makes."
               </p>
-              
-              <div className="flex items-center justify-center space-x-8">
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mb-2">
-                    <span className="text-white font-bold text-sm">TP</span>
-                  </div>
-                  <div className="text-sm font-semibold text-slate-900">Dr. Tejas Patel</div>
-                  <div className="text-xs text-slate-600">Founder & Lead Therapist</div>
-                </div>
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mb-2">
-                    <span className="text-white font-bold text-sm">MP</span>
-                  </div>
-                  <div className="text-sm font-semibold text-slate-900">Dr. Mona Patel</div>
-                  <div className="text-xs text-slate-600">Co-Founder & OT Specialist</div>
-                </div>
-              </div>
             </div>
           </div>
         </motion.div>
