@@ -1,0 +1,82 @@
+{
+  "name": "Sparsh Clinic Backend",
+  "description": "Backend API for Sparsh Pediatric Rehabilitation Clinic",
+  "repository": "https://github.com/riteshgangnani10/sparsh-clinic",
+  "logo": "https://railway.app/brand/logo-dark.png",
+  "success_url": "/api/health",
+  "env": {
+    "PORT": {
+      "description": "Port for the backend server",
+      "value": "5000"
+    },
+    "NODE_ENV": {
+      "description": "Environment",
+      "value": "production"
+    },
+    "JWT_SECRET": {
+      "description": "Secret key for JWT tokens (generate a random string)",
+      "generator": "secret"
+    },
+    "MONGODB_URI": {
+      "description": "MongoDB connection string from Railway MongoDB plugin"
+    },
+    "CLOUDINARY_CLOUD_NAME": {
+      "description": "Cloudinary cloud name (get from cloudinary.com/console)",
+      "value": "demo"
+    },
+    "CLOUDINARY_API_KEY": {
+      "description": "Cloudinary API key",
+      "value": "demo"
+    },
+    "CLOUDINARY_API_SECRET": {
+      "description": "Cloudinary API secret",
+      "value": "demo"
+    },
+    "EMAIL_HOST": {
+      "description": "Email SMTP host",
+      "value": "smtp.gmail.com"
+    },
+    "EMAIL_PORT": {
+      "description": "Email SMTP port",
+      "value": "587"
+    },
+    "EMAIL_USER": {
+      "description": "Email address for sending emails",
+      "value": "demo@example.com"
+    },
+    "EMAIL_PASSWORD": {
+      "description": "Email password or app password",
+      "value": "demo"
+    },
+    "EMAIL_FROM": {
+      "description": "From email address",
+      "value": "noreply@sparshprc.com"
+    },
+    "EMAIL_TO": {
+      "description": "Email address to receive contact form submissions",
+      "value": "sparshprc@gmail.com"
+    },
+    "FRONTEND_URL": {
+      "description": "Frontend URL (will be updated after Vercel deployment)",
+      "value": "http://localhost:3000"
+    },
+    "ADMIN_EMAIL": {
+      "description": "Default admin email",
+      "value": "admin@sparshprc.com"
+    },
+    "ADMIN_PASSWORD": {
+      "description": "Default admin password (change after first login)",
+      "value": "changeThisPassword123!"
+    }
+  },
+  "build": {
+    "builder": "NIXPACKS",
+    "buildCommand": "npm install"
+  },
+  "deploy": {
+    "startCommand": "npm start",
+    "restartPolicyType": "ON_FAILURE",
+    "restartPolicyMaxRetries": 10
+  }
+}
+
