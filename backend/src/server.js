@@ -16,6 +16,7 @@ import settingsRoutes from './routes/settings.routes.js';
 import contactRoutes from './routes/contact.routes.js';
 import conditionRoutes from './routes/condition.routes.js';
 import resourceRoutes from './routes/resource.routes.js';
+import setupRoutes from './routes/setup.routes.js';
 
 dotenv.config();
 
@@ -45,6 +46,7 @@ app.use('/api/settings', settingsRoutes);
 app.use('/api/contact', contactRoutes);
 app.use('/api/conditions', conditionRoutes);
 app.use('/api/resources', resourceRoutes);
+app.use('/api/setup', setupRoutes);
 
 // Health check
 app.get('/api/health', (req, res) => {
