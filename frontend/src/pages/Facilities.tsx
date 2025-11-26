@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
-import { useState } from 'react';
-import { FiCamera, FiMapPin, FiPhone } from 'react-icons/fi';
+import { FiCamera, FiPhone } from 'react-icons/fi';
 import BehindTheScenesSection from '../components/home/BehindTheScenesSection';
 
 export default function Facilities() {

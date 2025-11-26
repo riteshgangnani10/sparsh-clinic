@@ -1,18 +1,9 @@
-import { useQuery } from '@tanstack/react-query';
 import { motion } from 'framer-motion';
 import { FiHeart, FiAward, FiUsers, FiMapPin, FiClock } from 'react-icons/fi';
-import { teamAPI } from '../api';
 import MakingLifeWorthLivingSection from '../components/home/MakingLifeWorthLivingSection';
 import ValuesPhilosophySection from '../components/home/ValuesPhilosophySection';
 
 export default function About() {
-  const { data: team } = useQuery({
-    queryKey: ['team'],
-    queryFn: async () => {
-      const response = await teamAPI.getAll({ isActive: true, isFeatured: true });
-      return response.data.data;
-    },
-  });
 
   return (
     <div className="min-h-screen bg-white">
