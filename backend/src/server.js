@@ -2,6 +2,8 @@ import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 import dotenv from 'dotenv';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
 import connectDB from './config/database.js';
 import { errorHandler } from './middleware/errorHandler.js';
 
@@ -18,7 +20,12 @@ import conditionRoutes from './routes/condition.routes.js';
 import resourceRoutes from './routes/resource.routes.js';
 import setupRoutes from './routes/setup.routes.js';
 
-dotenv.config();
+// Get directory path for ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+// Load environment variables from backend/.env
+dotenv.config({ path: join(__dirname, '../../.env') });
 
 const app = express();
 const PORT = process.env.PORT || 5000;
