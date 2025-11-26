@@ -182,11 +182,11 @@ export default function ValuesPhilosophySection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="bg-slate-900 rounded-2xl p-10 text-white mb-16"
+          className="bg-blue-600 rounded-2xl p-10 text-white mb-16"
         >
           <div className="text-center mb-10">
             <h3 className="text-2xl lg:text-3xl font-bold mb-4">Our Guiding Principles</h3>
-            <p className="text-lg text-slate-300 max-w-2xl mx-auto">
+            <p className="text-lg text-blue-100 max-w-2xl mx-auto">
               These core beliefs shape every aspect of our practice and ensure that our care 
               remains focused on what matters most: your child's success and your family's wellbeing.
             </p>
@@ -207,9 +207,9 @@ export default function ValuesPhilosophySection() {
                 </div>
                 
                 <h4 className="text-lg font-bold mb-3">{principle.title}</h4>
-                <p className="text-slate-300 leading-relaxed mb-4 text-sm">{principle.description}</p>
+                <p className="text-blue-100 leading-relaxed mb-4 text-sm">{principle.description}</p>
                 
-                <blockquote className="text-xs italic text-blue-200 border-l-2 border-blue-400 pl-3">
+                <blockquote className="text-xs italic text-blue-200 border-l-2 border-blue-300 pl-3">
                   "{principle.quote}"
                 </blockquote>
               </motion.div>

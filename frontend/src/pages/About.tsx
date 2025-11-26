@@ -8,7 +8,7 @@ export default function About() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-600 to-slate-700 text-white py-20">
+      <section className="bg-gradient-to-br from-blue-600 to-blue-700 text-white py-20">
         <div className="container mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -51,24 +51,24 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="prose prose-lg max-w-none text-slate-700"
+              className="text-slate-800"
             >
-              <div className="bg-slate-50 rounded-2xl p-8 mb-8">
-                <p className="text-lg leading-relaxed mb-6">
-                  Powered by passion and sailing on dreams, <strong>SPARSH was established in 2005</strong> to nurture and cultivate 
+              <div className="bg-white rounded-2xl p-8 mb-8 shadow-sm border border-slate-100">
+                <p className="text-lg leading-relaxed mb-6 text-slate-700">
+                  Powered by passion and sailing on dreams, <strong className="text-slate-900">SPARSH was established in 2005</strong> to nurture and cultivate 
                   functionality in the lives of physically and mentally challenged children affected with neurological, 
                   musculoskeletal, genetic, and metabolic disorders.
                 </p>
                 
-                <p className="text-lg leading-relaxed mb-6">
+                <p className="text-lg leading-relaxed mb-6 text-slate-700">
                   Years of vigorous effort have brought many stories of clinical success and appraisals from patients 
                   and parents, which is not a matter of our pride but a matter of our satisfaction.
                 </p>
                 
-                <p className="text-lg leading-relaxed">
-                  From initial years of career, <strong>Dr. Mona Patel and Dr. Tejas Patel</strong> had a dream to build their unique 
+                <p className="text-lg leading-relaxed text-slate-700">
+                  From initial years of career, <strong className="text-slate-900">Dr. Mona Patel and Dr. Tejas Patel</strong> had a dream to build their unique 
                   rehabilitation centre. With blessings and support, they started Sparsh as a Paediatric Neuro Developmental 
-                  Therapy Clinic in 2005, which has now grown into a comprehensive <strong>3000 sq ft facility</strong> offering state-of-the-art 
+                  Therapy Clinic in 2005, which has now grown into a comprehensive <strong className="text-slate-900">3000 sq ft facility</strong> offering state-of-the-art 
                   services including Aquatic Therapy, Sensory Integration, and Applied Behavioral Analysis.
                 </p>
               </div>
