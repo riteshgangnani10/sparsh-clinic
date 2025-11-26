@@ -1,7 +1,10 @@
 import { useQuery } from '@tanstack/react-query';
 import { motion } from 'framer-motion';
 import HeroSection from '../components/home/HeroSection';
+import AboutExperienceSection from '../components/home/AboutExperienceSection';
 import ServicesSection from '../components/home/ServicesSection';
+import ProcessSection from '../components/home/ProcessSection';
+import ResearchSection from '../components/home/ResearchSection';
 import DoctorProfilesSection from '../components/home/DoctorProfilesSection';
 import TestimonialsSection from '../components/home/TestimonialsSection';
 import { settingsAPI } from '../api';
@@ -22,16 +25,25 @@ export default function Home() {
       transition={{ duration: 0.5 }}
       className="overflow-hidden"
     >
-      {/* Hero Section - Clean first impression */}
+      {/* Hero Section - NAPA Style Impact */}
       <HeroSection settings={settings} />
       
-      {/* Services Section - What we offer */}
+      {/* About Experience - Build Trust */}
+      <AboutExperienceSection />
+      
+      {/* Services/Programs - Core Offerings */}
       <ServicesSection />
       
-      {/* Doctor Profiles - Build trust */}
+      {/* Our Process - Clear Steps */}
+      <ProcessSection />
+      
+      {/* Research Section - Credibility */}
+      <ResearchSection />
+      
+      {/* Doctor Profiles - Expertise */}
       <DoctorProfilesSection />
       
-      {/* Testimonials - Social proof */}
+      {/* Testimonials - Social Proof */}
       <TestimonialsSection />
     </motion.div>
   );
