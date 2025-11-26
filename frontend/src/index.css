@@ -1,35 +1,85 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  /* Professional Medical Typography */
+  html {
+    @apply scroll-smooth;
+  }
+  
   body {
-    @apply font-sans text-gray-900 bg-gray-50;
+    @apply font-sans text-neutral-900 bg-neutral-50 antialiased;
+    font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1, 'pnum' 1, 'tnum' 0, 'onum' 1, 'lnum' 0, 'dlig' 0;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading;
+    @apply font-heading font-bold text-neutral-900;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+  }
+  
+  h1 {
+    @apply text-4xl lg:text-5xl xl:text-6xl;
+  }
+  
+  h2 {
+    @apply text-3xl lg:text-4xl;
+  }
+  
+  h3 {
+    @apply text-2xl lg:text-3xl;
+  }
+  
+  h4 {
+    @apply text-xl lg:text-2xl;
+  }
+  
+  p {
+    @apply leading-relaxed text-neutral-700;
+  }
+  
+  /* Focus styles for accessibility */
+  *:focus {
+    @apply outline-none ring-2 ring-primary-500 ring-offset-2;
+  }
+  
+  /* Selection styles */
+  ::selection {
+    @apply bg-primary-100 text-primary-900;
   }
 }
 
 @layer components {
-  /* Button Styles */
+  /* Professional Button Styles */
   .btn {
-    @apply px-6 py-3 rounded-lg font-medium transition-all duration-300 inline-flex items-center justify-center gap-2;
+    @apply px-6 py-3 rounded-xl font-semibold transition-all duration-200 inline-flex items-center justify-center gap-2 border-0 cursor-pointer;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  }
+  
+  .btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.15);
+  }
+  
+  .btn:active {
+    transform: translateY(0);
   }
   
   .btn-primary {
-    @apply bg-primary-500 text-white hover:bg-primary-600 hover:shadow-colored active:scale-95;
+    @apply bg-primary-600 text-white hover:bg-primary-700;
+    box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.15);
   }
   
   .btn-secondary {
-    @apply bg-secondary-500 text-white hover:bg-secondary-600 active:scale-95;
+    @apply bg-secondary-600 text-white hover:bg-secondary-700;
+    box-shadow: 0 4px 14px 0 rgba(5, 150, 105, 0.15);
   }
   
   .btn-outline {
-    @apply border-2 border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-white active:scale-95;
+    @apply border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white bg-white;
   }
   
   .btn-lg {
@@ -40,83 +90,176 @@
     @apply px-4 py-2 text-sm;
   }
   
-  /* Card Styles */
+  /* Professional Card Styles */
   .card {
-    @apply bg-white rounded-2xl shadow-soft p-6 transition-all duration-300;
+    @apply bg-white rounded-2xl p-6 transition-all duration-300;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   }
   
   .card-hover {
-    @apply hover:shadow-medium hover:-translate-y-1;
+    @apply hover:-translate-y-2;
   }
   
-  /* Input Styles */
-  .input {
-    @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all;
+  .card-hover:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   }
   
-  .textarea {
-    @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all resize-none;
+  /* Medical Form Styles */
+  .form-group {
+    @apply mb-6;
   }
   
-  .label {
-    @apply block text-sm font-medium text-gray-700 mb-2;
+  .form-label {
+    @apply block text-sm font-semibold text-neutral-700 mb-2;
   }
   
-  /* Container */
-  .container-custom {
-    @apply container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+  .form-input {
+    @apply w-full px-4 py-3 border border-neutral-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-all bg-white text-neutral-900 placeholder-neutral-500;
   }
   
-  /* Section */
-  .section {
-    @apply py-16 md:py-24;
+  .form-input:focus {
+    @apply border-primary-500 shadow-medical;
   }
   
-  .section-title {
-    @apply text-4xl md:text-5xl font-bold text-center mb-4;
+  .form-textarea {
+    @apply form-input resize-none min-h-[120px];
   }
   
-  .section-subtitle {
-    @apply text-lg text-gray-600 text-center max-w-3xl mx-auto mb-12;
+  .form-select {
+    @apply form-input appearance-none bg-no-repeat bg-right pr-10;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.75rem center;
+    background-size: 1.5em 1.5em;
   }
   
-  /* Badge */
-  .badge {
-    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+  /* Professional Container */
+  .container-medical {
+    @apply container mx-auto px-6 max-w-7xl;
+  }
+  
+  /* Section Styles */
+  .section-medical {
+    @apply py-16 lg:py-24;
+  }
+  
+  .section-title-medical {
+    @apply text-3xl lg:text-4xl xl:text-5xl font-bold text-center mb-6 text-neutral-900;
+  }
+  
+  .section-subtitle-medical {
+    @apply text-xl text-neutral-600 text-center max-w-3xl mx-auto mb-16 leading-relaxed;
+  }
+  
+  /* Professional Badge */
+  .badge-medical {
+    @apply inline-flex items-center px-4 py-2 rounded-full text-sm font-medium;
   }
   
   .badge-primary {
-    @apply bg-primary-100 text-primary-700;
+    @apply bg-primary-100 text-primary-800;
+  }
+  
+  .badge-secondary {
+    @apply bg-secondary-100 text-secondary-800;
+  }
+  
+  .badge-accent {
+    @apply bg-accent-100 text-accent-800;
   }
   
   .badge-success {
-    @apply bg-green-100 text-green-700;
+    @apply bg-green-100 text-green-800;
   }
   
   .badge-warning {
-    @apply bg-yellow-100 text-yellow-700;
+    @apply bg-yellow-100 text-yellow-800;
   }
   
-  /* Loading */
-  .spinner {
-    @apply animate-spin rounded-full border-4 border-gray-200 border-t-primary-500;
+  .badge-error {
+    @apply bg-red-100 text-red-800;
   }
   
-  /* Link */
-  .link {
-    @apply text-primary-500 hover:text-primary-600 transition-colors underline-offset-2 hover:underline;
+  /* Loading States */
+  .loading-spinner {
+    @apply animate-spin rounded-full border-4 border-neutral-200 border-t-primary-600;
+  }
+  
+  .loading-pulse {
+    @apply animate-pulse bg-neutral-200 rounded;
+  }
+  
+  /* Professional Links */
+  .link-medical {
+    @apply text-primary-600 hover:text-primary-700 transition-colors font-medium;
+  }
+  
+  .link-medical:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
+  }
+  
+  /* Medical Icons */
+  .icon-medical {
+    @apply w-6 h-6 text-primary-600;
+  }
+  
+  .icon-lg {
+    @apply w-8 h-8;
+  }
+  
+  .icon-sm {
+    @apply w-4 h-4;
   }
 }
 
 @layer utilities {
-  .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-secondary-500;
+  /* Medical Gradients */
+  .gradient-medical {
+    @apply bg-gradient-to-br from-primary-600 to-secondary-600;
   }
   
-  .bg-pattern {
+  .gradient-medical-light {
+    @apply bg-gradient-to-br from-primary-50 to-secondary-50;
+  }
+  
+  .text-gradient-medical {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-secondary-600;
+  }
+  
+  /* Medical Patterns */
+  .pattern-medical {
     background-image: 
-      radial-gradient(circle at 20% 50%, rgba(24, 144, 255, 0.05) 0%, transparent 50%),
-      radial-gradient(circle at 80% 80%, rgba(14, 165, 233, 0.05) 0%, transparent 50%);
+      radial-gradient(circle at 25% 25%, rgba(37, 99, 235, 0.04) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, rgba(5, 150, 105, 0.04) 0%, transparent 50%);
+  }
+  
+  .pattern-dots {
+    background-image: radial-gradient(circle, rgba(37, 99, 235, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  
+  /* Scrollbar Styles */
+  .scrollbar-medical {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(37, 99, 235, 0.3) transparent;
+  }
+  
+  .scrollbar-medical::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .scrollbar-medical::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .scrollbar-medical::-webkit-scrollbar-thumb {
+    background-color: rgba(37, 99, 235, 0.3);
+    border-radius: 3px;
+  }
+  
+  .scrollbar-medical::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(37, 99, 235, 0.5);
   }
   
   .scrollbar-hide {
@@ -127,10 +270,79 @@
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
+  
+  /* Medical Shadows */
+  .shadow-medical-soft {
+    box-shadow: 0 2px 15px rgba(37, 99, 235, 0.08);
+  }
+  
+  .shadow-medical-medium {
+    box-shadow: 0 4px 20px rgba(37, 99, 235, 0.12);
+  }
+  
+  .shadow-medical-large {
+    box-shadow: 0 10px 40px rgba(37, 99, 235, 0.15);
+  }
+  
+  /* Text Utilities */
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* Animation Utilities */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+  
+  .animate-float-slow {
+    animation: float 6s ease-in-out infinite;
+  }
 }
 
-/* Custom animations */
-@keyframes shimmer {
+/* Professional Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-medical {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes shimmer-medical {
   0% {
     background-position: -1000px 0;
   }
@@ -139,9 +351,29 @@
   }
 }
 
-.animate-shimmer {
-  animation: shimmer 2s infinite linear;
-  background: linear-gradient(to right, #f0f0f0 0%, #e0e0e0 50%, #f0f0f0 100%);
+.animate-pulse-medical {
+  animation: pulse-medical 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-shimmer-medical {
+  animation: shimmer-medical 2s infinite linear;
+  background: linear-gradient(to right, #f8fafc 0%, #e2e8f0 50%, #f8fafc 100%);
   background-size: 1000px 100%;
 }
 
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    @apply text-black bg-white;
+  }
+  
+  .shadow-medical,
+  .shadow-medical-lg,
+  .shadow-card {
+    box-shadow: none !important;
+  }
+}
