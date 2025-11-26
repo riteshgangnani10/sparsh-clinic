@@ -10,15 +10,15 @@ export default function HeroSection({}: HeroSectionProps) {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-slate-50 to-blue-50/20 overflow-hidden">
-      {/* Subtle medical background pattern */}
+    <section className="relative min-h-screen bg-white overflow-hidden">
+      {/* Very subtle background pattern */}
       <div className="absolute inset-0">
-        <svg className="absolute top-0 left-0 w-full h-full opacity-2" viewBox="0 0 100 100">
+        <svg className="absolute top-0 left-0 w-full h-full opacity-5" viewBox="0 0 100 100">
           <defs>
-            <pattern id="hero-pattern" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
-              <circle cx="15" cy="15" r="0.8" fill="#1e40af" opacity="0.1" />
-              <circle cx="8" cy="22" r="0.4" fill="#1e40af" opacity="0.1" />
-              <circle cx="22" cy="8" r="0.4" fill="#1e40af" opacity="0.1" />
+            <pattern id="hero-pattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+              <circle cx="20" cy="20" r="0.5" fill="#3b82f6" />
+              <circle cx="10" cy="30" r="0.3" fill="#3b82f6" />
+              <circle cx="30" cy="10" r="0.3" fill="#3b82f6" />
             </pattern>
           </defs>
           <rect width="100" height="100" fill="url(#hero-pattern)" />
@@ -28,98 +28,98 @@ export default function HeroSection({}: HeroSectionProps) {
       <div className="relative z-10 container mx-auto px-6 py-20">
         <div className="grid lg:grid-cols-12 gap-12 items-center min-h-[80vh]">
           
-          {/* Left Content - Professional Layout */}
+          {/* Left Content - High Contrast */}
           <div className="lg:col-span-7 space-y-8">
             
-            {/* Trust Badge - Medical Professional */}
+            {/* Trust Badge - High Contrast */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="flex items-center space-x-4"
             >
-              <div className="flex items-center bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full border border-slate-200 shadow-sm">
+              <div className="flex items-center bg-blue-50 px-4 py-2 rounded-full border border-blue-200">
                 <div className="w-2 h-2 bg-green-500 rounded-full mr-3 animate-pulse"></div>
-                <span className="text-sm font-medium text-slate-700">Trusted by 5000+ families since 2005</span>
+                <span className="text-sm font-semibold text-slate-800">Trusted by 5000+ families since 2005</span>
               </div>
               <div className="flex items-center space-x-1">
                 {[...Array(5)].map((_, i) => (
-                  <FiStar key={i} className="w-4 h-4 text-amber-400 fill-current" />
+                  <FiStar key={i} className="w-4 h-4 text-amber-500 fill-current" />
                 ))}
               </div>
             </motion.div>
 
-            {/* Main Headline - Professional Medical */}
+            {/* Main Headline - Dark Text on Light Background */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
             >
-              <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
-                <span className="text-slate-900">Unlocking Every Child's</span>
+              <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-slate-900">
+                Unlocking Every Child's
                 <br />
                 <span className="text-blue-600">Potential</span>
               </h1>
               
-              <div className="mt-6 text-xl text-slate-600 leading-relaxed max-w-2xl">
+              <div className="mt-6 text-xl text-slate-700 leading-relaxed max-w-2xl">
                 Expert pediatric therapy that transforms challenges into achievements. 
                 We help children with cerebral palsy, autism, and developmental delays 
                 discover their unique strengths and reach new milestones.
               </div>
             </motion.div>
 
-            {/* Key Differentiators - Aligned Grid */}
+            {/* Key Differentiators - Better Contrast */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
               className="grid grid-cols-1 md:grid-cols-3 gap-4 py-6"
             >
-              <div className="flex items-center space-x-3 p-4 bg-white/70 backdrop-blur-sm rounded-lg border border-slate-100">
+              <div className="flex items-center space-x-3 p-4 bg-blue-50 rounded-lg border border-blue-100">
                 <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
                   <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                   </svg>
                 </div>
                 <div>
-                  <div className="font-semibold text-slate-900 text-sm">Personalized Care</div>
-                  <div className="text-xs text-slate-600">Tailored to each child</div>
+                  <div className="font-semibold text-slate-900">Personalized Care</div>
+                  <div className="text-sm text-slate-600">Tailored to each child</div>
                 </div>
               </div>
               
-              <div className="flex items-center space-x-3 p-4 bg-white/70 backdrop-blur-sm rounded-lg border border-slate-100">
+              <div className="flex items-center space-x-3 p-4 bg-blue-50 rounded-lg border border-blue-100">
                 <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
                   <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
                 <div>
-                  <div className="font-semibold text-slate-900 text-sm">Proven Results</div>
-                  <div className="text-xs text-slate-600">95% success rate</div>
+                  <div className="font-semibold text-slate-900">Proven Results</div>
+                  <div className="text-sm text-slate-600">95% success rate</div>
                 </div>
               </div>
               
-              <div className="flex items-center space-x-3 p-4 bg-white/70 backdrop-blur-sm rounded-lg border border-slate-100">
+              <div className="flex items-center space-x-3 p-4 bg-blue-50 rounded-lg border border-blue-100">
                 <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
                   <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
                   </svg>
                 </div>
                 <div>
-                  <div className="font-semibold text-slate-900 text-sm">Expert Team</div>
-                  <div className="text-xs text-slate-600">NDTA certified</div>
+                  <div className="font-semibold text-slate-900">Expert Team</div>
+                  <div className="text-sm text-slate-600">NDTA certified</div>
                 </div>
               </div>
             </motion.div>
 
-            {/* CTA Buttons - Professional Medical */}
+            {/* CTA Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.6 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <button className="group bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300">
+              <button className="group bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300">
                 <div className="flex items-center justify-center space-x-2">
                   <span>Schedule Free Consultation</span>
                   <FiArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -127,40 +127,40 @@ export default function HeroSection({}: HeroSectionProps) {
                 <div className="text-sm opacity-90 font-normal">Expert assessment & personalized plan</div>
               </button>
               
-              <button className="group flex items-center justify-center space-x-3 bg-white/90 backdrop-blur-sm border-2 border-slate-200 text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:border-blue-300 transition-all duration-300">
+              <button className="group flex items-center justify-center space-x-3 bg-white border-2 border-slate-300 text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg hover:border-blue-400 hover:bg-blue-50 transition-all duration-300">
                 <FiPhone className="w-5 h-5 text-blue-600" />
                 <div>
-                  <div className="text-blue-600">+91-9426284419</div>
+                  <div className="text-blue-600 font-bold">+91-9426284419</div>
                   <div className="text-sm font-normal text-slate-600">Speak with our team</div>
                 </div>
               </button>
             </motion.div>
 
-            {/* Contact Info - Clean, No Box */}
+            {/* Contact Info - Clean and Readable */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.6 }}
-              className="flex flex-wrap items-center gap-6 text-sm text-slate-600"
+              className="flex flex-wrap items-center gap-6 text-sm text-slate-700"
             >
               <div className="flex items-center space-x-2">
                 <FiMapPin className="w-4 h-4 text-blue-600" />
-                <span>Ahmedabad, Gujarat</span>
+                <span className="font-medium">Ahmedabad, Gujarat</span>
               </div>
               <div className="flex items-center space-x-2">
                 <FiClock className="w-4 h-4 text-blue-600" />
-                <span>Mon-Sat: 9AM-7PM</span>
+                <span className="font-medium">Mon-Sat: 9AM-7PM</span>
               </div>
               <div className="flex items-center space-x-2">
                 <svg className="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                 </svg>
-                <span>NDTA Certified</span>
+                <span className="font-medium">NDTA Certified</span>
               </div>
             </motion.div>
           </div>
 
-          {/* Right Content - Professional Medical Image */}
+          {/* Right Content - Professional Image */}
           <div className="lg:col-span-5">
             <motion.div
               initial={{ opacity: 0, x: 30 }}
@@ -169,25 +169,23 @@ export default function HeroSection({}: HeroSectionProps) {
               className="relative"
             >
               
-              {/* Main Image Container - Medical Professional */}
-              <div className="relative bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-100">
+              {/* Main Image Container */}
+              <div className="relative bg-gradient-to-br from-blue-50 to-slate-50 rounded-2xl overflow-hidden shadow-xl border border-slate-200">
                 
-                {/* Professional Medical Image */}
+                {/* Professional Image */}
                 <div className="aspect-[4/5] relative">
                   {!isVideoPlaying ? (
                     <>
-                      {/* Professional Medical Placeholder */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-slate-50">
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <div className="text-center">
-                            <div className="w-24 h-24 mx-auto mb-6 bg-white rounded-full shadow-md flex items-center justify-center">
-                              <svg className="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                              </svg>
-                            </div>
-                            <h3 className="text-xl font-bold text-slate-900 mb-2">Expert Pediatric Care</h3>
-                            <p className="text-slate-600 px-6 text-sm">Professional therapy in a caring environment</p>
+                      {/* Professional Image Placeholder */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-slate-50 flex items-center justify-center">
+                        <div className="text-center">
+                          <div className="w-24 h-24 mx-auto mb-6 bg-white rounded-full shadow-lg flex items-center justify-center">
+                            <svg className="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                            </svg>
                           </div>
+                          <h3 className="text-xl font-bold text-slate-900 mb-2">Expert Pediatric Care</h3>
+                          <p className="text-slate-600 px-6 text-sm">Professional therapy in a caring environment</p>
                         </div>
                       </div>
                       
@@ -220,23 +218,23 @@ export default function HeroSection({}: HeroSectionProps) {
                   )}
                 </div>
 
-                {/* Stats Cards - Aligned */}
-                <div className="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-md p-4 border border-slate-100">
+                {/* Stats Cards - Better Positioned */}
+                <div className="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-lg p-4 border border-slate-200">
                   <div className="flex items-center space-x-4">
                     <div className="text-center">
                       <div className="text-xl font-bold text-blue-600">5000+</div>
-                      <div className="text-xs text-slate-600">Children Helped</div>
+                      <div className="text-xs text-slate-600">Children</div>
                     </div>
                     <div className="w-px h-8 bg-slate-200"></div>
                     <div className="text-center">
                       <div className="text-xl font-bold text-blue-600">18+</div>
-                      <div className="text-xs text-slate-600">Years Experience</div>
+                      <div className="text-xs text-slate-600">Years</div>
                     </div>
                   </div>
                 </div>
 
                 {/* Certification Badge */}
-                <div className="absolute -top-3 -right-3 bg-blue-600 text-white rounded-xl shadow-md p-3">
+                <div className="absolute -top-3 -right-3 bg-blue-600 text-white rounded-xl shadow-lg p-3">
                   <div className="text-center">
                     <div className="text-sm font-bold">NDTA</div>
                     <div className="text-xs">Certified</div>
@@ -251,7 +249,6 @@ export default function HeroSection({}: HeroSectionProps) {
           </div>
         </div>
       </div>
-
     </section>
   );
 }
