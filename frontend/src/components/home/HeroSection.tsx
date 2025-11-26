@@ -6,7 +6,7 @@ interface HeroSectionProps {
   settings?: any;
 }
 
-export default function HeroSection({ settings }: HeroSectionProps) {
+export default function HeroSection({}: HeroSectionProps) {
   return (
     <section className="relative bg-gradient-to-br from-blue-50 to-white min-h-[85vh] flex items-center">
       <div className="container mx-auto px-6 py-20">
