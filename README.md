@@ -1,165 +1,89 @@
-# Sparsh Pediatric Rehabilitation Clinic Website
+# Sparsh Pediatric Rehabilitation Clinic
 
-A modern, vibrant website for Sparsh Clinic featuring a comprehensive CMS for managing content, images, and videos.
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https://github.com/riteshgangnani10/sparsh-clinic)
 
-## Project Structure
+A comprehensive, modern website for Sparsh Clinic with a powerful CMS for managing content, images, and videos.
 
-```
-sparsh/
-├── frontend/          # React + Vite frontend
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── api/
-│   │   ├── utils/
-│   │   └── styles/
-│   └── package.json
-├── backend/           # Node.js + Express backend
-│   ├── src/
-│   │   ├── routes/
-│   │   ├── controllers/
-│   │   ├── models/
-│   │   ├── middleware/
-│   │   ├── config/
-│   │   └── utils/
-│   └── package.json
-└── README.md
-```
+## 🚀 Quick Deploy
 
-## Setup Instructions
-
-### Backend Setup
-
-1. Navigate to backend directory:
-   ```bash
-   cd backend
-   npm install
-   ```
-
-2. Create `.env` file from `.env.example`:
-   ```bash
-   cp .env.example .env
-   ```
-
-3. Update `.env` with your credentials:
-   - MongoDB connection string
-   - JWT secret
-   - Cloudinary credentials
-   - Email configuration
-
-4. Start the backend server:
-   ```bash
-   npm run dev
-   ```
-
-5. (Optional) Seed initial data:
-   ```bash
-   npm run seed
-   ```
-
-### Frontend Setup
-
-1. Navigate to frontend directory:
-   ```bash
-   cd frontend
-   npm install
-   ```
-
-2. Create `.env` file:
-   ```bash
-   echo "VITE_API_URL=http://localhost:5000/api" > .env
-   ```
-
-3. Start the development server:
-   ```bash
-   npm run dev
-   ```
-
-4. Open browser at `http://localhost:3000`
-
-## Default Admin Credentials
-
-- Email: admin@sparshprc.com
-- Password: changeThisPassword123!
-
-**Important:** Change these credentials immediately after first login!
-
-## Features
-
-### Public Website
-- Homepage with hero section and services
-- About Us with doctor profiles
-- Services pages
-- Gallery with images and videos
-- Testimonials
-- Case studies
-- Contact form
-- Parent resources
-
-### Admin Panel
-- Media library management
-- Content management for all sections
-- Testimonial management
-- Case study management
-- Team member profiles
-- Service management
-- Website settings
-
-## Technology Stack
-
-### Frontend
-- React 18
-- TypeScript
-- Vite
-- Tailwind CSS
-- Framer Motion
-- React Router
-- React Query
-- Axios
-
-### Backend
-- Node.js
-- Express
-- MongoDB with Mongoose
-- JWT Authentication
-- Cloudinary (media storage)
-- Multer + Sharp (image processing)
-- Nodemailer (email)
-
-## Deployment
+### Backend (Railway)
+1. Click the "Deploy on Railway" button above
+2. Add MongoDB database plugin
+3. Configure environment variables (see below)
 
 ### Frontend (Vercel)
-1. Push code to GitHub
-2. Import project in Vercel
-3. Set environment variables
-4. Deploy
-
-### Backend (Railway/Render)
-1. Connect GitHub repository
-2. Set environment variables
-3. Deploy
-
-### Database (MongoDB Atlas)
-1. Create cluster
-2. Create database user
-3. Whitelist IP addresses
-4. Update connection string in backend `.env`
-
-## Environment Variables
-
-### Frontend
-```
-VITE_API_URL=your-backend-url/api
+```bash
+cd frontend
+npx vercel --yes
 ```
 
-### Backend
-See `.env.example` for complete list
+## 📋 Environment Variables
 
-## License
+### Backend (Railway)
+```env
+PORT=5000
+NODE_ENV=production
+MONGODB_URI=<from Railway MongoDB plugin>
+JWT_SECRET=<generate a random string>
+CLOUDINARY_CLOUD_NAME=demo
+CLOUDINARY_API_KEY=demo
+CLOUDINARY_API_SECRET=demo
+EMAIL_HOST=smtp.gmail.com
+EMAIL_PORT=587
+EMAIL_USER=your-email@gmail.com
+EMAIL_PASSWORD=your-app-password
+EMAIL_FROM=noreply@sparshprc.com
+EMAIL_TO=sparshprc@gmail.com
+FRONTEND_URL=<your Vercel URL>
+ADMIN_EMAIL=admin@sparshprc.com
+ADMIN_PASSWORD=changeThisPassword123!
+```
 
-Proprietary - Sparsh Pediatric Rehabilitation Clinic
+### Frontend (Vercel)
+```env
+VITE_API_URL=<your Railway backend URL>/api
+```
 
-## Contact
+## 🎉 Features
 
-For support, email sparshprc@gmail.com
+- ✅ Beautiful, vibrant homepage with animations
+- ✅ Comprehensive admin CMS
+- ✅ Services, testimonials, case studies management
+- ✅ Image/video gallery with Cloudinary
+- ✅ Contact form with email notifications
+- ✅ Mobile-responsive design
+- ✅ SEO optimized
+
+## 📖 Documentation
+
+- [Setup Guide](SETUP.md)
+- [Railway Deployment](RAILWAY_DEPLOYMENT.md)
+- [Quick Deploy](QUICK_DEPLOY.md)
+- [Project Summary](PROJECT_SUMMARY.md)
+
+## 🔐 Default Login
+
+- **Email**: admin@sparshprc.com
+- **Password**: changeThisPassword123!
+
+⚠️ **Change these credentials immediately after first login!**
+
+## 💰 Cost
+
+- Railway: ~$5-10/month (includes MongoDB)
+- Vercel: FREE
+- Cloudinary: FREE (25GB)
+
+## 🛠️ Tech Stack
+
+**Backend**: Node.js, Express, MongoDB, Cloudinary  
+**Frontend**: React, TypeScript, Tailwind CSS, Vite
+
+## 📞 Support
+
+For issues or questions, see [SETUP.md](SETUP.md)
+
+---
+
+**Built with ❤️ for Sparsh Pediatric Rehabilitation Clinic**
 
