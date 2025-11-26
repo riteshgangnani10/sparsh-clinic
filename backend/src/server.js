@@ -55,6 +55,23 @@ app.use('/api/conditions', conditionRoutes);
 app.use('/api/resources', resourceRoutes);
 app.use('/api/setup', setupRoutes);
 
+// Root route
+app.get('/', (req, res) => {
+  res.json({ 
+    message: '🏥 Sparsh Pediatric Rehabilitation Clinic API',
+    status: 'running',
+    version: '1.0.0',
+    endpoints: {
+      health: '/api/health',
+      setup: '/api/setup/create-first-admin',
+      auth: '/api/auth',
+      services: '/api/services',
+      testimonials: '/api/testimonials',
+      gallery: '/api/gallery'
+    }
+  });
+});
+
 // Health check
 app.get('/api/health', (req, res) => {
   res.json({ status: 'OK', message: 'Sparsh Clinic API is running' });
