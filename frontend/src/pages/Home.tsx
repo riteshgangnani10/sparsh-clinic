@@ -1,10 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { motion } from 'framer-motion';
 import HeroSection from '../components/home/HeroSection';
-import MakingLifeWorthLivingSection from '../components/home/MakingLifeWorthLivingSection';
-import ValuesPhilosophySection from '../components/home/ValuesPhilosophySection';
-import RealStoriesSection from '../components/home/RealStoriesSection';
-import BehindTheScenesSection from '../components/home/BehindTheScenesSection';
 import ServicesSection from '../components/home/ServicesSection';
 import { settingsAPI } from '../api';
 
@@ -24,22 +20,10 @@ export default function Home() {
       transition={{ duration: 0.5 }}
       className="overflow-hidden"
     >
-      {/* Mission-Driven Hero Section */}
+      {/* Hero Section - Main Introduction */}
       <HeroSection settings={settings} />
       
-      {/* Making Life Worth Living - Core Mission */}
-      <MakingLifeWorthLivingSection />
-      
-      {/* Values & Philosophy */}
-      <ValuesPhilosophySection />
-      
-      {/* Real Stories with Video Testimonials */}
-      <RealStoriesSection />
-      
-      {/* Behind the Scenes - Facilities & Team */}
-      <BehindTheScenesSection />
-      
-      {/* Services Section */}
+      {/* Services Overview - What We Offer */}
       <ServicesSection />
     </motion.div>
   );

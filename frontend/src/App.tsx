@@ -13,6 +13,7 @@ const ServiceDetail = lazy(() => import('./pages/ServiceDetail'));
 const Conditions = lazy(() => import('./pages/Conditions'));
 const ConditionDetail = lazy(() => import('./pages/ConditionDetail'));
 const Gallery = lazy(() => import('./pages/Gallery'));
+const Facilities = lazy(() => import('./pages/Facilities'));
 const Testimonials = lazy(() => import('./pages/Testimonials'));
 const CaseStudies = lazy(() => import('./pages/CaseStudies'));
 const CaseStudyDetail = lazy(() => import('./pages/CaseStudyDetail'));
@@ -47,6 +48,7 @@ function App() {
           <Route path="conditions" element={<Conditions />} />
           <Route path="conditions/:slug" element={<ConditionDetail />} />
           <Route path="gallery" element={<Gallery />} />
+          <Route path="facilities" element={<Facilities />} />
           <Route path="testimonials" element={<Testimonials />} />
           <Route path="case-studies" element={<CaseStudies />} />
           <Route path="case-studies/:slug" element={<CaseStudyDetail />} />

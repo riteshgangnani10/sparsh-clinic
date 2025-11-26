@@ -24,7 +24,7 @@ export default function Header() {
     { to: '/', label: 'Home' },
     { to: '/about', label: 'About' },
     { to: '/services', label: 'Services' },
-    { to: '/gallery', label: 'Gallery' },
+    { to: '/facilities', label: 'Facilities' },
     { to: '/testimonials', label: 'Success Stories' },
     { to: '/contact', label: 'Contact' },
   ];
