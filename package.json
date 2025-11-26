@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "description": "Sparsh Pediatric Rehabilitation Clinic - Monorepo",
   "scripts": {
-    "start": "cd backend && npm start",
+    "start": "cd frontend && npm start",
+    "build": "cd frontend && npm run build",
     "install-backend": "cd backend && npm install",
     "install-frontend": "cd frontend && npm install",
     "dev-backend": "cd backend && npm run dev",
-    "dev-frontend": "cd frontend && npm run dev"
+    "dev-frontend": "cd frontend && npm run dev",
+    "start-backend": "cd backend && npm start"
   },
   "engines": {
     "node": ">=18.0.0"
