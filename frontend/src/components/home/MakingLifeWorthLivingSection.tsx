@@ -141,11 +141,11 @@ export default function MakingLifeWorthLivingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="bg-slate-900 rounded-2xl p-10 text-white mb-16"
+          className="bg-blue-600 rounded-2xl p-10 text-white mb-16"
         >
           <div className="text-center mb-10">
             <h3 className="text-2xl lg:text-3xl font-bold mb-4">Our Track Record</h3>
-            <p className="text-lg text-slate-300 max-w-2xl mx-auto">
+            <p className="text-lg text-blue-100 max-w-2xl mx-auto">
               These numbers represent real families, real progress, and real hope. 
               Each statistic tells a story of transformation and achievement.
             </p>
@@ -159,13 +159,13 @@ export default function MakingLifeWorthLivingSection() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.6 }}
-                className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-6"
+                className="text-center bg-white/20 backdrop-blur-sm rounded-xl p-6"
               >
-                <div className="text-3xl lg:text-4xl font-bold mb-2 text-blue-400">
+                <div className="text-3xl lg:text-4xl font-bold mb-2 text-white">
                   {item.number}
                 </div>
-                <div className="text-base font-semibold text-slate-200 mb-2">{item.label}</div>
-                <div className="text-sm text-slate-400 leading-relaxed">{item.description}</div>
+                <div className="text-base font-semibold text-blue-100 mb-2">{item.label}</div>
+                <div className="text-sm text-blue-200 leading-relaxed">{item.description}</div>
               </motion.div>
             ))}
           </div>
