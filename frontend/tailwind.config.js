@@ -7,55 +7,123 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Subtle, Professional Medical Colors (Crysta IVF inspired)
+        // Sparsh Logo Inspired Color Palette
+        sparsh: {
+          // Teal/Turquoise from logo
+          teal: {
+            50: '#f0fdfa',
+            100: '#ccfbf1',
+            200: '#99f6e4',
+            300: '#5eead4',
+            400: '#2dd4bf',
+            500: '#20B2AA', // Main teal from logo
+            600: '#0d9488',
+            700: '#0f766e',
+            800: '#115e59',
+            900: '#134e4a',
+          },
+          // Lime/Yellow-Green from logo
+          lime: {
+            50: '#f7fee7',
+            100: '#ecfccb',
+            200: '#d9f99d',
+            300: '#bef264',
+            400: '#a3e635',
+            500: '#9ACD32', // Main lime from logo
+            600: '#65a30d',
+            700: '#4d7c0f',
+            800: '#365314',
+            900: '#1a2e05',
+          },
+          // Purple from logo
+          purple: {
+            50: '#faf5ff',
+            100: '#f3e8ff',
+            200: '#e9d5ff',
+            300: '#d8b4fe',
+            400: '#c084fc',
+            500: '#6A5ACD', // Main purple from logo
+            600: '#9333ea',
+            700: '#7c3aed',
+            800: '#6b21a8',
+            900: '#581c87',
+          },
+          // Orange/Tomato from logo
+          orange: {
+            50: '#fff7ed',
+            100: '#ffedd5',
+            200: '#fed7aa',
+            300: '#fdba74',
+            400: '#fb923c',
+            500: '#FF6347', // Main orange/tomato from logo
+            600: '#ea580c',
+            700: '#c2410c',
+            800: '#9a3412',
+            900: '#7c2d12',
+          },
+          // Dark Gray from logo
+          gray: {
+            50: '#f8fafc',
+            100: '#f1f5f9',
+            200: '#e2e8f0',
+            300: '#cbd5e1',
+            400: '#94a3b8',
+            500: '#64748b',
+            600: '#475569',
+            700: '#334155',
+            800: '#2F4F4F', // Main dark gray from logo
+            900: '#0f172a',
+          }
+        },
+        // Primary colors matching logo
         primary: {
-          50: '#f0f9ff',
-          100: '#e0f2fe',
-          200: '#bae6fd',
-          300: '#7dd3fc',
-          400: '#38bdf8',
-          500: '#0ea5e9',
-          600: '#0284c7', // Main professional blue
-          700: '#0369a1',
-          800: '#075985',
-          900: '#0c4a6e',
+          50: '#f0fdfa',
+          100: '#ccfbf1',
+          200: '#99f6e4',
+          300: '#5eead4',
+          400: '#2dd4bf',
+          500: '#20B2AA', // Sparsh teal
+          600: '#0d9488',
+          700: '#0f766e',
+          800: '#115e59',
+          900: '#134e4a',
         },
         secondary: {
+          50: '#f7fee7',
+          100: '#ecfccb',
+          200: '#d9f99d',
+          300: '#bef264',
+          400: '#a3e635',
+          500: '#9ACD32', // Sparsh lime
+          600: '#65a30d',
+          700: '#4d7c0f',
+          800: '#365314',
+          900: '#1a2e05',
+        },
+        accent: {
+          50: '#fff7ed',
+          100: '#ffedd5',
+          200: '#fed7aa',
+          300: '#fdba74',
+          400: '#fb923c',
+          500: '#FF6347', // Sparsh orange
+          600: '#ea580c',
+          700: '#c2410c',
+          800: '#9a3412',
+          900: '#7c2d12',
+        },
+        neutral: {
           50: '#f8fafc',
           100: '#f1f5f9',
           200: '#e2e8f0',
           300: '#cbd5e1',
           400: '#94a3b8',
           500: '#64748b',
-          600: '#475569', // Professional gray
+          600: '#475569',
           700: '#334155',
-          800: '#1e293b',
+          800: '#2F4F4F', // Sparsh dark gray
           900: '#0f172a',
-        },
-        accent: {
-          50: '#fef2f2',
-          100: '#fee2e2',
-          200: '#fecaca',
-          300: '#fca5a5',
-          400: '#f87171',
-          500: '#ef4444',
-          600: '#dc2626', // Subtle red for CTAs
-          700: '#b91c1c',
-          800: '#991b1b',
-          900: '#7f1d1d',
-        },
-        success: {
-          50: '#f0fdf4',
-          100: '#dcfce7',
-          200: '#bbf7d0',
-          300: '#86efac',
-          400: '#4ade80',
-          500: '#22c55e',
-          600: '#16a34a', // Success green
-          700: '#15803d',
-          800: '#166534',
-          900: '#14532d',
-        },
+        }
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
@@ -72,6 +140,7 @@ export default {
         '4xl': ['2.25rem', { lineHeight: '2.5rem' }],
         '5xl': ['3rem', { lineHeight: '1.1' }],
         '6xl': ['3.75rem', { lineHeight: '1.1' }],
+        '7xl': ['4.5rem', { lineHeight: '1.1' }],
       },
       spacing: {
         '18': '4.5rem',
@@ -83,6 +152,7 @@ export default {
         'slide-up': 'slideUp 0.6s ease-out',
         'slide-in-right': 'slideInRight 0.6s ease-out',
         'pulse-slow': 'pulse 3s ease-in-out infinite',
+        'bounce-slow': 'bounce 2s ease-in-out infinite',
       },
       keyframes: {
         fadeIn: {
@@ -99,16 +169,21 @@ export default {
         },
       },
       boxShadow: {
-        'subtle': '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-        'soft': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-        'medium': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
-        'large': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+        'subtle': '0 1px 3px 0 rgba(32, 178, 170, 0.1), 0 1px 2px 0 rgba(32, 178, 170, 0.06)',
+        'soft': '0 4px 6px -1px rgba(32, 178, 170, 0.1), 0 2px 4px -1px rgba(32, 178, 170, 0.06)',
+        'medium': '0 10px 15px -3px rgba(32, 178, 170, 0.1), 0 4px 6px -2px rgba(32, 178, 170, 0.05)',
+        'large': '0 20px 25px -5px rgba(32, 178, 170, 0.1), 0 10px 10px -5px rgba(32, 178, 170, 0.04)',
+        'sparsh': '0 10px 30px -5px rgba(32, 178, 170, 0.2), 0 4px 6px -2px rgba(255, 99, 71, 0.1)',
       },
       borderRadius: {
         'xl': '0.75rem',
         '2xl': '1rem',
         '3xl': '1.5rem',
+        '4xl': '2rem',
       },
+      backdropBlur: {
+        'xs': '2px',
+      }
     },
   },
   plugins: [],

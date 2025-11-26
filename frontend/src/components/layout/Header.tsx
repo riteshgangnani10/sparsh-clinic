@@ -25,7 +25,7 @@ export default function Header() {
     { to: '/about', label: 'About' },
     { to: '/services', label: 'Services' },
     { to: '/gallery', label: 'Gallery' },
-    { to: '/testimonials', label: 'Testimonials' },
+    { to: '/testimonials', label: 'Success Stories' },
     { to: '/contact', label: 'Contact' },
   ];
 
@@ -37,16 +37,42 @@ export default function Header() {
     }`}>
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
+          {/* Sparsh Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center group-hover:bg-blue-700 transition-colors">
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            {/* Logo SVG - Recreating the Sparsh logo design */}
+            <div className="relative">
+              <svg width="120" height="40" viewBox="0 0 300 100" className="group-hover:scale-105 transition-transform">
+                {/* Background circle for logo */}
+                <defs>
+                  <linearGradient id="sparsh-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stopColor="#20B2AA" />
+                    <stop offset="20%" stopColor="#9ACD32" />
+                    <stop offset="40%" stopColor="#6A5ACD" />
+                    <stop offset="60%" stopColor="#FF6347" />
+                    <stop offset="80%" stopColor="#20B2AA" />
+                    <stop offset="100%" stopColor="#2F4F4F" />
+                  </linearGradient>
+                </defs>
+                
+                {/* Sparsh text */}
+                <text x="10" y="35" fontSize="32" fontWeight="bold" fill="url(#sparsh-gradient)" fontFamily="Arial, sans-serif">
+                  sparsh
+                </text>
+                
+                {/* Subtitle */}
+                <text x="10" y="55" fontSize="12" fill="#666" fontFamily="Arial, sans-serif">
+                  paediatric rehabilitation clinic
+                </text>
+                
+                {/* Tagline */}
+                <text x="10" y="75" fontSize="10" fill="#FF6347" fontFamily="Arial, sans-serif" fontStyle="italic">
+                  "making life, worth living!"
+                </text>
+                
+                {/* Small heart icon */}
+                <path d="M270 25 C270 20, 275 15, 280 15 C285 15, 290 20, 290 25 C290 35, 280 45, 280 45 C280 45, 270 35, 270 25 Z" 
+                      fill="#FF6347" opacity="0.8"/>
               </svg>
-            </div>
-            <div>
-              <div className="text-xl font-bold text-slate-900">Sparsh Clinic</div>
-              <div className="text-xs text-slate-600 -mt-1">Pediatric Rehabilitation</div>
             </div>
           </Link>
 
@@ -56,9 +82,9 @@ export default function Header() {
               <Link
                 key={link.to}
                 to={link.to}
-                className={`font-medium transition-colors hover:text-blue-600 ${
+                className={`font-medium transition-colors hover:text-teal-600 ${
                   location.pathname === link.to 
-                    ? 'text-blue-600' 
+                    ? 'text-teal-600' 
                     : scrolled ? 'text-slate-700' : 'text-slate-800'
                 }`}
               >
@@ -71,16 +97,16 @@ export default function Header() {
           <div className="hidden lg:flex items-center space-x-4">
             <a 
               href="tel:+919426284419"
-              className="flex items-center space-x-2 text-slate-600 hover:text-blue-600 transition-colors"
+              className="flex items-center space-x-2 text-slate-600 hover:text-teal-600 transition-colors"
             >
               <FiPhone className="w-4 h-4" />
               <span className="font-medium">+91-9426284419</span>
             </a>
             <Link
               to="/contact"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-all hover:shadow-md"
+              className="bg-gradient-to-r from-teal-500 to-blue-500 hover:from-teal-600 hover:to-blue-600 text-white px-6 py-2 rounded-lg font-semibold transition-all hover:shadow-md"
             >
-              Book Appointment
+              Start Your Journey
             </Link>
           </div>
 
@@ -113,7 +139,7 @@ export default function Header() {
                     to={link.to}
                     className={`block px-4 py-3 rounded-lg font-medium transition-colors ${
                       location.pathname === link.to
-                        ? 'bg-blue-50 text-blue-600'
+                        ? 'bg-teal-50 text-teal-600'
                         : 'text-slate-700 hover:bg-slate-50'
                     }`}
                   >
@@ -125,16 +151,16 @@ export default function Header() {
                 <div className="px-4 py-3 border-t border-slate-100 space-y-3">
                   <a 
                     href="tel:+919426284419"
-                    className="flex items-center space-x-2 text-slate-600 hover:text-blue-600"
+                    className="flex items-center space-x-2 text-slate-600 hover:text-teal-600"
                   >
                     <FiPhone className="w-4 h-4" />
                     <span>+91-9426284419</span>
                   </a>
                   <Link
                     to="/contact"
-                    className="block bg-blue-600 text-white text-center py-3 rounded-lg font-semibold"
+                    className="block bg-gradient-to-r from-teal-500 to-blue-500 text-white text-center py-3 rounded-lg font-semibold"
                   >
-                    Book Appointment
+                    Start Your Journey
                   </Link>
                 </div>
               </nav>
