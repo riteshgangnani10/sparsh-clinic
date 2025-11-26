@@ -1,12 +1,9 @@
 import { useQuery } from '@tanstack/react-query';
 import { motion } from 'framer-motion';
 import HeroSection from '../components/home/HeroSection';
-import AboutExperienceSection from '../components/home/AboutExperienceSection';
+import RealStoriesSection from '../components/home/RealStoriesSection';
+import BehindTheScenesSection from '../components/home/BehindTheScenesSection';
 import ServicesSection from '../components/home/ServicesSection';
-import ProcessSection from '../components/home/ProcessSection';
-import ResearchSection from '../components/home/ResearchSection';
-import DoctorProfilesSection from '../components/home/DoctorProfilesSection';
-import TestimonialsSection from '../components/home/TestimonialsSection';
 import { settingsAPI } from '../api';
 
 export default function Home() {
@@ -25,26 +22,17 @@ export default function Home() {
       transition={{ duration: 0.5 }}
       className="overflow-hidden"
     >
-      {/* Hero Section - NAPA Style Impact */}
+      {/* Unique Hero Section with Video */}
       <HeroSection settings={settings} />
       
-      {/* About Experience - Build Trust */}
-      <AboutExperienceSection />
+      {/* Real Stories with Video Testimonials */}
+      <RealStoriesSection />
       
-      {/* Services/Programs - Core Offerings */}
+      {/* Behind the Scenes - Facilities & Team */}
+      <BehindTheScenesSection />
+      
+      {/* Services Section */}
       <ServicesSection />
-      
-      {/* Our Process - Clear Steps */}
-      <ProcessSection />
-      
-      {/* Research Section - Credibility */}
-      <ResearchSection />
-      
-      {/* Doctor Profiles - Expertise */}
-      <DoctorProfilesSection />
-      
-      {/* Testimonials - Social Proof */}
-      <TestimonialsSection />
     </motion.div>
   );
 }
