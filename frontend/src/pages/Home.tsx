@@ -4,9 +4,6 @@ import HeroSection from '../components/home/HeroSection';
 import ServicesSection from '../components/home/ServicesSection';
 import DoctorProfilesSection from '../components/home/DoctorProfilesSection';
 import TestimonialsSection from '../components/home/TestimonialsSection';
-import AboutSection from '../components/home/AboutSection';
-import StatsSection from '../components/home/StatsSection';
-import CTASection from '../components/home/CTASection';
 import { settingsAPI } from '../api';
 
 export default function Home() {
@@ -25,26 +22,17 @@ export default function Home() {
       transition={{ duration: 0.5 }}
       className="overflow-hidden"
     >
-      {/* Hero Section - First impression */}
+      {/* Hero Section - Clean first impression */}
       <HeroSection settings={settings} />
       
       {/* Services Section - What we offer */}
       <ServicesSection />
       
-      {/* Doctor Profiles - Build trust with expertise */}
+      {/* Doctor Profiles - Build trust */}
       <DoctorProfilesSection />
       
-      {/* About Section - Our story and mission */}
-      <AboutSection />
-      
-      {/* Stats Section - Credibility through numbers */}
-      <StatsSection settings={settings} />
-      
-      {/* Testimonials - Social proof and success stories */}
+      {/* Testimonials - Social proof */}
       <TestimonialsSection />
-      
-      {/* CTA Section - Convert visitors to patients */}
-      <CTASection />
     </motion.div>
   );
 }
