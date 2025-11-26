@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { FiPlay } from 'react-icons/fi';
 import Button from '../common/Button';
 
 interface HeroSectionProps {
@@ -39,7 +38,7 @@ export default function HeroSection({ settings }: HeroSectionProps) {
             </motion.div>
 
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              {heroTitle.split(' ').map((word, index) => (
+              {heroTitle.split(' ').map((word: string, index: number) => (
                 <motion.span
                   key={index}
                   className="inline-block mr-2"
